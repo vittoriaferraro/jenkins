@@ -5,10 +5,13 @@ pipeline {
        steps { sh 'npm install' }
      }
      stage ('build') {
-       steps { sh 'npm build'}
+       steps { sh 'npm run-script build'}
      }
      stage ('test') {
-       steps { sh 'npm test'}
+       steps { sh 'npm test --code-coverage'}
+     }
+     stage ('lint') {
+       steps { sh 'npm lint'}
      }
    }
  }
