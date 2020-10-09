@@ -8,7 +8,7 @@ pipeline {
        steps { sh 'npm build'}
      }
      stage ('test') {
-       steps { sh 'ng test'}
+       steps { sh 'npm test'}
      }
    }
  }
