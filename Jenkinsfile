@@ -5,7 +5,10 @@ pipeline {
        steps { sh 'npm install' }
      }
      stage ('build') {
-       steps { sh 'npm run build'}
+       steps { sh 'ng build'}
+     }
+     stage ('test') {
+       steps { sh 'ng test'}
      }
    }
  }
